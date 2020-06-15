@@ -16,9 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: find ndk
-      run: |
-        find /usr -name "*ndk*" -type d 2> /dev/null
     - name: find ndk vers
       run: |
         ls -l /usr/local/lib/android/sdk/ndk-bundle
