@@ -18,8 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: find ndk
       run: |
-        sudo apt-get install tree
-        tree /usr -d
+        find /usr -name "*ndk*" -type d 2> /dev/null
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
